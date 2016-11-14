@@ -1,5 +1,5 @@
 # PLDI-2017
-The Porthos tool implementing the resulkts of the submitted article "Portability Analysis for Axiomatic Memory Models"
+The Porthos tool implementing the resulkts of the submitted article **"Portability Analysis for Axiomatic Memory Models"**
 
 Usage: 
 
