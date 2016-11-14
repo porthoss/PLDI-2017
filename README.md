@@ -13,4 +13,5 @@ where \<source> and \<target> must be one of sc, tso, pso, rmo, alpha, power, ca
 
 To run the mutual exclusion algorithms benchmakrs run:
 
-```./testMutual.py```
+``````
+./testMutual.py
