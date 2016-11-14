@@ -1,0 +1,19 @@
+X86 302-unknown
+{ 
+y=0; x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$4	| 		| 		;
+ MOV [y],EAX	| 		| 		;
+ MOV [y],EAX	| 		| 		;
+ MOV EAX,[y]	| 		| 		;
+ MOV EBX,[y]	| 		| 		;
+		| MOV EBX,$4	| 		;
+		| MOV EAX,$4	| 		;
+		| MOV [y],EBX	| 		;
+		| MOV EAX,$5	| 		;
+		| 		| MOV EAX,$5	;
+		| 		| MOV [y],EAX	;
+		| 		| MOV EBX,[x]	;
+
+locations [y;x;]

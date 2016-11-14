@@ -1,0 +1,19 @@
+X86 360-unknown
+{ 
+y=0; x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$5	| 		| 		;
+ MOV EAX,$3	| 		| 		;
+ MOV EAX,$1	| 		| 		;
+ MOV EAX,[y]	| 		| 		;
+ MOV EAX,$5	| 		| 		;
+		| MOV EAX,$5	| 		;
+		| MOV EBX,$3	| 		;
+		| 		| MOV EAX,$4	;
+		| 		| MOV [x],EAX	;
+		| 		| MOV [y],EAX	;
+		| 		| MOV [x],EAX	;
+		| 		| MOV [y],EAX	;
+
+locations [y;x;]
