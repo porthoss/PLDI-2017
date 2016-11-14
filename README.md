@@ -7,7 +7,7 @@ The Porthos tool implementing the results of the article **"Portability Analysis
 To run the litmus tests in the /Litmus folder run: 
 
 ```
-./porthos.py -i <input> -s <source> -t <target>
+./porthos.py -i <input> -s <source> -t <target> [-d]
 ```
 
 where \<source> and \<target> must be one of the following MCMs: 
@@ -18,6 +18,8 @@ where \<source> and \<target> must be one of the following MCMs:
 - alpha
 - power
 - cav10
+
+and the -d option instructs the tool to encode dead executions.
 
 To run the mutual exclusion algorithms benchmarks run:
 
