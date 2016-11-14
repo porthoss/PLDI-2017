@@ -1,4 +1,7 @@
-The Porthos tool implementing the results of the submitted article **"Portability Analysis for Axiomatic Memory Models"** for #PLDI-2017
+#PLDI-2017
+
+The Porthos tool implementing the results of the submitted article **"Portability Analysis for Axiomatic Memory Models"**
+
 ===
 To run the litmus tests in the /Litmus folder run: 
 
