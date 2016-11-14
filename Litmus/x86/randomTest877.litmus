@@ -1,0 +1,19 @@
+X86 877-unknown
+{ 
+x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$5	| 		| 		;
+ MOV [x],EAX	| 		| 		;
+ MOV EBX,[x]	| 		| 		;
+ MOV [x],EAX	| 		| 		;
+		| MOV EBX,$2	| 		;
+		| MOV EBX,$5	| 		;
+		| MOV EAX,[x]	| 		;
+		| 		| MOV EAX,$4	;
+		| 		| MOV EAX,[x]	;
+		| 		| MOV EBX,[x]	;
+		| 		| MOV [x],EAX	;
+		| 		| MOV EAX,[x]	;
+
+locations [x;]

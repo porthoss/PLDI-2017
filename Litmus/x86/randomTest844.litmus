@@ -1,0 +1,19 @@
+X86 844-unknown
+{ 
+x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$4	| 		| 		;
+		| MOV EBX,$4	| 		;
+		| MFENCE	| 		;
+		| MOV [x],EBX	| 		;
+		| MOV EBX,$2	| 		;
+		| MOV [x],EBX	| 		;
+		| MOV EAX,[x]	| 		;
+		| 		| MOV EBX,$1	;
+		| 		| MFENCE	;
+		| 		| MFENCE	;
+		| 		| MOV [x],EBX	;
+		| 		| MOV EAX,[x]	;
+
+locations [x;]

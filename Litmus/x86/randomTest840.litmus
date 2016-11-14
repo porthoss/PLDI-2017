@@ -1,0 +1,19 @@
+X86 840-unknown
+{ 
+y=0; x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EBX,$1	| 		| 		;
+ MOV EBX,$2	| 		| 		;
+ MOV EBX,$5	| 		| 		;
+		| MOV EBX,$2	| 		;
+		| MOV EBX,[y]	| 		;
+		| MOV EBX,[y]	| 		;
+		| MOV EBX,[y]	| 		;
+		| MOV [x],EBX	| 		;
+		| MOV [x],EBX	| 		;
+		| 		| MOV EBX,$3	;
+		| 		| MOV [y],EBX	;
+		| 		| MOV [x],EBX	;
+
+locations [y;x;]

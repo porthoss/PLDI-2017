@@ -1,0 +1,19 @@
+X86 899-unknown
+{ 
+x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EBX,$4	| 		| 		;
+ MOV EBX,[x]	| 		| 		;
+ MOV EAX,$5	| 		| 		;
+ MOV EAX,[x]	| 		| 		;
+ MOV EBX,[x]	| 		| 		;
+		| MOV EBX,$4	| 		;
+		| MOV EBX,[x]	| 		;
+		| MOV [x],EBX	| 		;
+		| MOV EAX,$3	| 		;
+		| 		| MOV EBX,$4	;
+		| 		| MOV EAX,[x]	;
+		| 		| MOV EBX,$5	;
+
+locations [x;]
