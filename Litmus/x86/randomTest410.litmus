@@ -1,0 +1,19 @@
+X86 410-unknown
+{ 
+x=0; y=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$2	| 		| 		;
+ MOV EBX,[x]	| 		| 		;
+ MOV EAX,[x]	| 		| 		;
+		| MOV EAX,$1	| 		;
+		| MOV EBX,$2	| 		;
+		| MOV EBX,[y]	| 		;
+		| MOV [y],EAX	| 		;
+		| MOV EAX,$2	| 		;
+		| MOV EAX,[x]	| 		;
+		| 		| MOV EAX,$1	;
+		| 		| MOV [x],EAX	;
+		| 		| MOV [y],EAX	;
+
+locations [x;y;]
