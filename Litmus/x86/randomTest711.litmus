@@ -1,0 +1,19 @@
+X86 711-unknown
+{ 
+x=0; y=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$1	| 		| 		;
+ MOV EBX,$3	| 		| 		;
+ MOV [x],EAX	| 		| 		;
+ MOV [y],EAX	| 		| 		;
+		| MOV EBX,$1	| 		;
+		| MOV [y],EBX	| 		;
+		| MOV EAX,$1	| 		;
+		| 		| MOV EAX,$1	;
+		| 		| MFENCE	;
+		| 		| MOV [y],EAX	;
+		| 		| MOV [x],EAX	;
+		| 		| MOV EAX,[x]	;
+
+locations [x;y;]

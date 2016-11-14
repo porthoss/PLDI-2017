@@ -1,0 +1,19 @@
+X86 737-unknown
+{ 
+y=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$2	| 		| 		;
+ MFENCE		| 		| 		;
+ MFENCE		| 		| 		;
+		| MOV EBX,$3	| 		;
+		| MFENCE	| 		;
+		| MFENCE	| 		;
+		| MOV EBX,$3	| 		;
+		| MOV EAX,[y]	| 		;
+		| 		| MOV EAX,$4	;
+		| 		| MOV EAX,$3	;
+		| 		| MOV EBX,$3	;
+		| 		| MOV EBX,[y]	;
+
+locations [y;]

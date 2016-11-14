@@ -1,0 +1,19 @@
+X86 756-unknown
+{ 
+y=0; x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EBX,$2	| 		| 		;
+ MOV [y],EBX	| 		| 		;
+ MOV [x],EBX	| 		| 		;
+ MOV EBX,[x]	| 		| 		;
+ MOV EBX,$2	| 		| 		;
+ MOV [x],EBX	| 		| 		;
+		| MOV EBX,$4	| 		;
+		| MOV [y],EBX	| 		;
+		| MOV [x],EBX	| 		;
+		| MOV EBX,[x]	| 		;
+		| 		| MOV EBX,$4	;
+		| 		| MOV [x],EBX	;
+
+locations [y;x;]
