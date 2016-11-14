@@ -1,0 +1,19 @@
+X86 685-unknown
+{ 
+x=0; y=0; 
+}
+ P0		| P1		| P2		;
+ MOV EBX,$2	| 		| 		;
+ MOV EAX,[x]	| 		| 		;
+ MOV EBX,$3	| 		| 		;
+		| MOV EBX,$2	| 		;
+		| MFENCE	| 		;
+		| MOV EBX,$1	| 		;
+		| 		| MOV EAX,$4	;
+		| 		| MOV [x],EAX	;
+		| 		| MOV EAX,[y]	;
+		| 		| MOV EAX,$3	;
+		| 		| MOV [y],EAX	;
+		| 		| MFENCE	;
+
+locations [x;y;]

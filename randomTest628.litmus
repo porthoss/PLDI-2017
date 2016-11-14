@@ -1,0 +1,19 @@
+X86 628-unknown
+{ 
+x=0; y=0; 
+}
+ P0		| P1		| P2		;
+ MOV EBX,$5	| 		| 		;
+ MOV EAX,[x]	| 		| 		;
+ MOV EAX,[x]	| 		| 		;
+		| MOV EBX,$4	| 		;
+		| MOV EAX,[y]	| 		;
+		| 		| MOV EAX,$2	;
+		| 		| MOV EBX,$1	;
+		| 		| MOV EBX,[x]	;
+		| 		| MOV EAX,[x]	;
+		| 		| MOV [x],EAX	;
+		| 		| MOV [x],EAX	;
+		| 		| MOV [y],EAX	;
+
+locations [x;y;]
