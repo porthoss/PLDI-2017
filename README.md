@@ -11,4 +11,3 @@ To run the mutual exclusion algorithms benchmakrs run:
 
 ```lala```
 ./testMutual.py
-
