@@ -1,0 +1,19 @@
+X86 997-unknown
+{ 
+x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$3	| 		| 		;
+ MOV [x],EAX	| 		| 		;
+ MFENCE		| 		| 		;
+ MOV EBX,$2	| 		| 		;
+		| MOV EBX,$1	| 		;
+		| MFENCE	| 		;
+		| MOV EAX,[x]	| 		;
+		| MOV EBX,$1	| 		;
+		| MOV [x],EBX	| 		;
+		| MOV EAX,$3	| 		;
+		| 		| MOV EAX,$3	;
+		| 		| MFENCE	;
+
+locations [x;]

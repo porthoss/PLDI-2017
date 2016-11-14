@@ -1,0 +1,19 @@
+X86 944-unknown
+{ 
+x=0; y=0; 
+}
+ P0		| P1		| P2		;
+ MOV EAX,$3	| 		| 		;
+ MOV EAX,[x]	| 		| 		;
+ MOV EAX,$3	| 		| 		;
+ MOV [y],EAX	| 		| 		;
+		| MOV EBX,$3	| 		;
+		| MOV EBX,$3	| 		;
+		| MOV EAX,[y]	| 		;
+		| MOV EBX,$3	| 		;
+		| 		| MOV EBX,$2	;
+		| 		| MOV [x],EBX	;
+		| 		| MOV [x],EBX	;
+		| 		| MOV EBX,$3	;
+
+locations [x;y;]
