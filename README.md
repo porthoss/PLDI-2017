@@ -10,7 +10,14 @@ To run the litmus tests in the /Litmus folder run:
 ./porthos.py -i <input> -s <source> -t <target>
 ```
 
-where \<source> and \<target> must be one of the following MCMs: sc, tso, pso, rmo, alpha, power, cav10
+where \<source> and \<target> must be one of the following MCMs: 
+- sc
+- tso
+- pso
+- rmo
+- alpha
+- power
+- cav10
 
 To run the mutual exclusion algorithms benchmakrs run:
 
