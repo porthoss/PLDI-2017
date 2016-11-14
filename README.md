@@ -12,4 +12,6 @@ To run the mutual exclusion algorithms benchmakrs run:
 ``````
 ./testMutual.py
 
+``````
+
 Note that Porthos uses Microsoft's Z3 SMT solver, which is not free for commercial use. Please see src/z3/LICENSE.txt for further information.
