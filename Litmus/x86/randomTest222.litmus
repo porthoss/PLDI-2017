@@ -1,0 +1,19 @@
+X86 222-unknown
+{ 
+y=0; x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EBX,$1	| 		| 		;
+ MOV EBX,[y]	| 		| 		;
+ MFENCE		| 		| 		;
+ MOV EBX,[x]	| 		| 		;
+		| MOV EAX,$4	| 		;
+		| MFENCE	| 		;
+		| MOV [x],EAX	| 		;
+		| MFENCE	| 		;
+		| MOV EAX,[y]	| 		;
+		| 		| MOV EAX,$5	;
+		| 		| MOV EBX,$3	;
+		| 		| MOV [x],EAX	;
+
+locations [y;x;]
