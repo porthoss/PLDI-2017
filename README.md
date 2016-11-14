@@ -1,6 +1,6 @@
 #PLDI-2017
 
-The Porthos tool implementing the results of the article **"Portability Analysis for Axiomatic Memory Models"**
+The Porthos tool implementing the results of the article **"Portability Analysis for Axiomatic Memory Models"**.
 
 ===
 
@@ -19,7 +19,7 @@ where \<source> and \<target> must be one of the following MCMs:
 - power
 - cav10
 
-To run the mutual exclusion algorithms benchmakrs run:
+To run the mutual exclusion algorithms benchmarks run:
 
 ```
 ./testMutual.py
