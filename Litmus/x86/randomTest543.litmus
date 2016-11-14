@@ -1,0 +1,19 @@
+X86 543-unknown
+{ 
+y=0; x=0; 
+}
+ P0		| P1		| P2		;
+ MOV EBX,$2	| 		| 		;
+ MOV [y],EBX	| 		| 		;
+ MOV EAX,[y]	| 		| 		;
+ MOV EAX,$4	| 		| 		;
+ MOV EBX,[y]	| 		| 		;
+ MOV [x],EBX	| 		| 		;
+		| MOV EAX,$4	| 		;
+		| MOV EBX,[x]	| 		;
+		| MOV EAX,[y]	| 		;
+		| 		| MOV EAX,$4	;
+		| 		| MOV EBX,[x]	;
+		| 		| MOV EBX,[x]	;
+
+locations [y;x;]
