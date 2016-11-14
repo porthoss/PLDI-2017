@@ -19,7 +19,7 @@ where \<source> and \<target> must be one of the following MCMs:
 - power
 - cav10
 
-and the ```-d`` option instructs the tool to encode dead executions.
+and the `-d` option instructs the tool to encode dead executions.
 
 To run the mutual exclusion algorithms benchmarks run:
 
